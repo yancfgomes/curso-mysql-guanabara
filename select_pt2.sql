@@ -44,5 +44,45 @@ where nome like 'p__t%';
 -- DISTINCT: mostra apenas valores diferentes, ou seja, não repete valores iguais
 -- Distinct é útil para mostrar valores únicos de uma coluna
 
--- exemplo 1: selecionando todos os cursos sem repetir
-select distinct nacionalidade from gafanhotos;
+-- exemplo 1: selecionando todos os países sem repetir
+select distinct nacionalidade from gafanhotos order by nacionalidade;
+
+-- exemplo 2: selecionando todas as cargas horárias sem repetir
+select distinct carga from cursos order by carga; 
+
+-- FUNÇÕES DE AGREGAÇÃO
+-- Funções de agregação são funções que realizam cálculos em um conjunto de valores e retornam um único valor.
+-- As funções de agregação mais comuns são: SUM, AVG, MIN, MAX, COUNT
+
+-- COUNT: conta o número de linhas de uma coluna
+-- exemplo 1: contando o número de cursos
+select count(*) as 'Número de cursos' from cursos; -- < as 'Número de cursos' é opcional >
+
+-- exemplo 2: contando o número de cursos com carga horária maior que 40
+select count(*) from cursos where carga > 40;
+
+-- MAX: retorna o maior valor de uma coluna
+-- exemplo 1: retornando o maior valor da coluna carga
+select max(carga) from cursos;
+-- ou:
+select nome,max(carga) from cursos;
+
+-- exemplo 2: retornando o maior valor da coluna carga onde o ano é 2016
+select max(totaulas) from cursos where ano = '2016';
+-- ou:
+select nome,max(totaulas) from cursos where ano = '2016';
+
+-- MIN: retorna o menor valor de uma coluna
+-- exemplo 1: retornando o menor valor da coluna carga
+select nome,min(carga) from cursos;
+
+-- exemplo 2: retornando o menor valor da coluna carga onde o ano é 2016
+select nome,min(totaulas) from cursos where ano = '2016';
+
+-- SUM: soma os valores de uma coluna
+-- exemplo 1: somando os valores da coluna carga
+select sum(carga) from cursos;
+
+-- AVG: calcula a média dos valores de uma coluna
+-- exemplo 1: calculando a média do total de aulas
+select avg(totaulas) from cursos;
