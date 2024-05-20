@@ -1,6 +1,6 @@
 -- *** COMANDO SELECT *** --
 
--- > SELECIONANDO FILTRANDO POR LINHAS < --
+-- > FILTRANDO POR LINHAS < --
 
 use cadastro; -- seleciona o banco de dados
 

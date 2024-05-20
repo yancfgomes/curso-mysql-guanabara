@@ -1,6 +1,7 @@
 -- *** COMANDO SELECT *** --
+-- Esse comando é utilizado para obeter dados de uma tabela.
 
--- > SELECIONANDO FILTRANDO POR COLUNAS < --
+-- > FILTRANDO POR COLUNAS < --
 
 use cadastro; -- seleciona o banco de dados 
 
